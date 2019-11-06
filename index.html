@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel='stylesheet' href ='style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/sketchy/bootstrap.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+<div class="container">
+<form>
+    <div class="form-group">
+        <label for = 'add-name'>Name</label>
+        <input type = 'text' class="form-control" id = 'add-name'/>
+    </div>
+    <div class="form-group">
+        <label for = 'add-author'>Author</label>
+        <input type = 'text' class="form-control" id = 'add-author'/>
+    </div>
+    <div class="form-group">
+    <label for = 'add-year'>Year</label>
+    <input type = 'text' class="form-control" id = 'add-year'/>
+    </div>
+    <input type = 'submit' class="btn btn-primary" value = 'Add book'/>
+    
+</form>
+    
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Year</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody id='library-books'></tbody>
+</table>
+
+</div>
+</body>
+</html
