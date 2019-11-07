@@ -9,15 +9,6 @@ class Book {
 
 class Library {
   static displayBooks () {
-    // const myLibrary = [
-    //   {
-    //     name: 'A Study in Scarlet',
-    //     author: 'Arthur Conan Doyle',
-    //     year: '1887',
-    //     status: true
-    //   }
-    // ]
-
     const books = Storer.getBook()
     // const library = myLibrary
     books.forEach((book) => Library.addBooksToLibrary(book))
@@ -107,26 +98,15 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   const author = document.querySelector('#author').value
   const year = document.querySelector('#year').value
 
-  // validations
-
-  // if (name === '' || author === '' || year === '') {
-  //   Library.showAlerts('Please fill in all fields', 'danger')
-  // } else {
   // instantiate a book
   const newBook = new Book(name, author, year)
 
-  const lib = new Library()
-
-  const store = new Storer()
-  // Add Book to Library
-  lib.addBooksToLibrary(newBook)
+  Library.addBooksToLibrary(newBook)
 
   // Add Book to store
-  store.addBook(newBook)
+  Storer.addBook(newBook)
 
-  // success message
-  // UI.showAlerts('Book added', 'success')
   // Clear form fields
-  lib.clearFields()
+  Library.clearFields()
   // }
 })
