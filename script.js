@@ -25,11 +25,10 @@ class Library {
         <td>${book.year}</td>
         `;
 
-    list.appendChild(row)
     row.appendChild(readStat)
     readStat.setAttribute("type", "button");
     readStat.classList.add('btn', 'btn-primary', 'read')
-    list.appendChild(row)
+    
 
     if (book.status) {
       readStat.classList.add('btn', 'btn-success')
@@ -51,12 +50,13 @@ class Library {
         readStat.classList.add('btn', 'btn-success')
         readStat.value = 'Finished'
       }
-    })
+    });
+    list.appendChild(row)
   }
 
-  static deleteBook(book){
-    if(book.classList.contains('delete')){
-      book.parentElement.parentElement.remove();
+  static deleteBook(el){
+    if(el.classList.contains('delete')){
+      el.parentElement.remove();
     }
   }
 
