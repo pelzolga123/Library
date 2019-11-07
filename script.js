@@ -10,7 +10,6 @@ class Book {
 class Library {
   static displayBooks () {
     const books = Storer.getBook()
-    // const library = myLibrary
     books.forEach((book) => Library.addBooksToLibrary(book))
   }
 
@@ -23,10 +22,12 @@ class Library {
         <td>${book.name}</td>
         <td>${book.author}</td>
         <td>${book.year}</td>
-        `
+        <td><td>
+        <td><a href='#' class='btn btn-danger btn-sm delete'>X</a><td>
+        `;
     list.appendChild(row)
     row.appendChild(readStat)
-    // readStat.setAttribute("type", "button");
+    readStat.setAttribute("type", "button");
     readStat.classList.add('btn', 'btn-primary', 'read')
     list.appendChild(row)
 
