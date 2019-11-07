@@ -19,12 +19,12 @@ class Library {
 
     const row = document.createElement('tr')
     row.innerHTML = `
+        <a href='#' class='btn btn-danger btn-sm delete'>X</a>
         <td>${book.name}</td>
         <td>${book.author}</td>
         <td>${book.year}</td>
-        <td><td>
-        <td><a href='#' class='btn btn-danger btn-sm delete'>X</a><td>
         `;
+
     list.appendChild(row)
     row.appendChild(readStat)
     readStat.setAttribute("type", "button");
@@ -52,6 +52,12 @@ class Library {
         readStat.value = 'Finished'
       }
     })
+  }
+
+  static deleteBook(book){
+    if(book.classList.contains('delete')){
+      book.parentElement.parentElement.remove();
+    }
   }
 
   static clearFields () {
@@ -86,8 +92,6 @@ class Storer {
   }
 }
 
-document.addEventListener('DOMContentLoaded', Library.displayBooks())
-
 // event: add a book
 
 document.querySelector('#book-form').addEventListener('submit', (e) => {
@@ -111,3 +115,10 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   Library.clearFields()
   // }
 })
+
+document.querySelector('#library-books').addEventListener('click', (e) =>{
+  Library.deleteBook(e.target)
+});
+
+
+document.addEventListener('DOMContentLoaded', Library.displayBooks);
