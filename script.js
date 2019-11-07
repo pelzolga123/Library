@@ -72,15 +72,15 @@ class Library {
                 readStat.classList.add("btn", "btn-success");
                 readStat.value = "Finished";
             }
-          });
+        });
 
         list.appendChild(row);
     }
 
     static deleteBook(el) {
-      if (el.classList.contains("delete")) {
-          el.parentElement.remove();
-      }
+        if (el.classList.contains("delete")) {
+            el.parentElement.remove();
+        }
     }
 
     static clearFields() {
