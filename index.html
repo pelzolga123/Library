@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/sketchy/bootstrap.min.css">
+    <title>Library</title>
+</head>
+
+<body>
+<h1 class="display-3 text-center mt-4">Library</h1>    
+<div class="container mt-4">
+    <div class="row">
+        <div class="card bg-dark col-md-4 mt-4 text-white">
+            <div class="book text-center mt-3 mb-4"><i class=" fas fa-book fa-5x
+            fa-spin"></i></div>
+            <div class="form-container mb-3">
+                <form id="book-form">
+                    <div class="form-group">
+                        <label for = 'name'>Name</label>
+                        <input type = 'text' class="form-control" id = 'name'/>
+                    </div>
+                    <div class="form-group">
+                        <label for = 'author'>Author</label>
+                        <input type = 'text' class="form-control" id = 'author'/>
+                    </div>
+                    <div class="form-group">
+                    <label for = 'year'>Year</label>
+                    <input type = 'text' class="form-control" id = 'year'/>
+                    </div>
+                    <input type = 'submit' class="btn btn-primary" value = 'Add book'/>
+
+                </form>
+            </div>
+        </div>
+        <div class="col-md-8 mt-5">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Remove</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Year</th>
+                        <th scope='col'>Status</th>
+                    </tr>
+                </thead>
+                <tbody id='library-books'></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/ccb88d753e.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
