@@ -4,8 +4,8 @@
 
 ## About the project
 
-Library is a small app for keeping track of books. The book can be marked as read or removed from library.
-Refreshing will set library to the initial empty state.
+The library is a small app for keeping track of books. The book can be marked as read or removed from the library.
+Refreshing will set the library to the initial empty state.
 
 ### Built With
 
